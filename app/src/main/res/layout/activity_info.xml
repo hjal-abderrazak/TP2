@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="30px"
+    tools:context=".InfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_marginTop="30px"
+            android:text="Nom et prenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nomPrenomTxt"></TextView>
+
+        <TextView
+            android:layout_marginTop="30px"
+            android:text="Formation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/formationTxt"></TextView>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_margin="10px"
+            android:layout_weight="0.5"
+            android:text="OK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="operationOk"></Button>
+        <Button
+            android:layout_margin="10px"
+            android:layout_weight="0.5"
+            android:text="Supprimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="operationSupp"></Button>
+
+    </LinearLayout>
+
+
+</LinearLayout>
