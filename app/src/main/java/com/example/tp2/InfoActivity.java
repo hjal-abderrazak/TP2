@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
 TextView nomPrenom, formation;
+
 int index;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

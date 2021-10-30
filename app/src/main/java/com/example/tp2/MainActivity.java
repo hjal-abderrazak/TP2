@@ -56,7 +56,7 @@ CustomArrayAdapter arrayAdapter;
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),FormulaireActivity.class);
                // launchSomeActivity.launch(intent);
-                startActivityForResult(intent,1);
+                startActivityForResult(intent,0);
             }
         });
 
@@ -70,8 +70,8 @@ CustomArrayAdapter arrayAdapter;
                 intent.putExtra("nom",itemVector.get(0)+ " "+ itemVector.get(1));
                 intent.putExtra("formation", itemVector.get(2)+"");
                 intent.putExtra("index",i);
-                startActivityForResult(intent,0);
-                startActivity(intent);
+                startActivityForResult(intent,1);
+
             }
         });
 
@@ -123,18 +123,8 @@ CustomArrayAdapter arrayAdapter;
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == 0) {
-            if(resultCode == Activity.RESULT_OK){
-                int index = data.getIntExtra("index",0);
-
-                listEtud.remove(index);
-                arrayAdapter.notifyDataSetChanged();
-            }
-            if (resultCode == Activity.RESULT_CANCELED) {
-
-            }
-        }
-        if (requestCode == 1) {
             if(resultCode == Activity.RESULT_OK){
 
                 Vector vector = new Vector();
@@ -147,6 +137,17 @@ CustomArrayAdapter arrayAdapter;
             }
             if (resultCode == Activity.RESULT_CANCELED) {
                 // Write your code if there's no result
+            }
+        }
+       else if (requestCode == 1){
+            if(resultCode == Activity.RESULT_OK){
+                int index = data.getIntExtra("index",0);
+
+                listEtud.remove(index);
+                arrayAdapter.notifyDataSetChanged();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+
             }
         }
 
@@ -193,8 +194,8 @@ CustomArrayAdapter arrayAdapter;
     }
 
     private void ajoutEdutiant() {
-        Intent intent = new Intent(getApplicationContext(),FirstActivity.class);
-        startActivityForResult(intent,2);
+        Intent intent = new Intent(getApplicationContext(),FormulaireActivity.class);
+        startActivityForResult(intent,0);
 
     }
 

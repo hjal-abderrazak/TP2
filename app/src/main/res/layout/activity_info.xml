@@ -40,6 +40,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:focusable="true"
             android:id="@+id/ok"
             android:layout_margin="10px"
             android:layout_weight="0.5"
@@ -48,6 +49,8 @@
             android:layout_height="wrap_content"
             android:onClick="operationOk"></Button>
         <Button
+            android:focusable="true"
+
             android:layout_margin="10px"
             android:layout_weight="0.5"
             android:text="Supprimer"
